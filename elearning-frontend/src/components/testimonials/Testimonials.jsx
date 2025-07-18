@@ -8,7 +8,7 @@ const Testimonials = () => {
       name: "Ayush Roy",
       // position: "Student",
       message:
-        "As a first-time homebuyer, I was worried about the payment process. But this system made me feel completely secure. ",
+        "As a first-time online learner, I was unsure about the learning process. But this platform made me feel completely confident and supported throughout.",
       image:
         "https://th.bing.com/th?q=Current+Bachelor&w=120&h=120&c=1&rs=1&qlt=90&cb=1&dpr=1.3&pid=InlineBlock&mkt=en-IN&cc=IN&setlang=en&adlt=moderate&t=1&mw=247",
     },
@@ -17,7 +17,7 @@ const Testimonials = () => {
       name: "Jinal Jain",
       // position: "Student",
       message:
-        "I manage a housing society, and this system has made our job so much easier.",
+        "I was nervous about starting online courses, but this platform made everything smooth and reassuring.",
       image:
         "https://th.bing.com/th/id/OIP.GKAiW3oc2TWXVEeZAzrWOAHaJF?w=135&h=180&c=7&r=0&o=5&dpr=1.3&pid=1.7",
     },
@@ -26,19 +26,11 @@ const Testimonials = () => {
       name: "Kiyan Patel",
       // position: "Student",
       message:
-        "I used this system to buy a new house, and I was happy with the overall experience.",
+        "As someone new to online learning, I had my doubts — but this platform exceeded my expectations and made learning enjoyable.",
       image:
         "https://th.bing.com/th?q=Current+Bachelor&w=120&h=120&c=1&rs=1&qlt=90&cb=1&dpr=1.3&pid=InlineBlock&mkt=en-IN&cc=IN&setlang=en&adlt=moderate&t=1&mw=247",
     },
-    // {
-    //   id: 4,
-    //   name: "Jane Smith",
-    //   position: "Student",
-    //   message:
-    //     "I've learned more here than in any other place. The interactive lessons and quizzes make learning enjoyable.",
-    //   image:
-    //     "https://th.bing.com/th/id/OIP.GKAiW3oc2TWXVEeZAzrWOAHaJF?w=135&h=180&c=7&r=0&o=5&dpr=1.3&pid=1.7",
-    // },
+   
   ];
   return (
     <section className="testimonials">

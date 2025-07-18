@@ -9,13 +9,13 @@ const Courses = () => {
   console.log(courses);
   return (
     <div className="courses">
-      <h2>Available Houses</h2>
+      <h2>Available Courses</h2>
 
       <div className="course-container">
         {courses && courses.length > 0 ? (
           courses.map((e) => <CourseCard key={e._id} course={e} />)
         ) : (
-          <p>No Houses Yet!</p>
+          <p>No Courses Yet!</p>
         )}
       </div>
     </div>

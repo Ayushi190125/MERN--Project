@@ -9,8 +9,8 @@ const Home = () => {
     <div>
       <div className="home">
         <div className="home-content">
-          <h1>Welcome to our Society Management Program</h1>
-          <p>"Manage. Connect. Grow."</p>
+          <h1>Welcome to our E-learning Plateform</h1>
+          <p>"Learn. Engage. Succeed."</p>
           <button onClick={() => navigate("/courses")} className="common-btn">
             Get Started
           </button>

@@ -73,7 +73,7 @@ const CourseDescription = ({ user }) => {
 
               <p>{course.description}</p>
 
-              <p>Price of this house is  ₹{course.price}</p>
+              <p>Price of this corse is  ₹{course.price}</p>
 
               {user && user.subscription.includes(course._id) ? (
                 <button

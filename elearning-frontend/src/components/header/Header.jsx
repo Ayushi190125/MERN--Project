@@ -9,7 +9,7 @@ const Header = ({ isAuth }) => {
 
       <div className="link">
         <Link to={"/"}>Home</Link>
-        <Link to={"/courses"}>Houses</Link>
+        <Link to={"/courses"}>Courses</Link>
         <Link to={"/about"}>About</Link>
         {isAuth ? (
           <Link to={"/account"}>Account</Link>

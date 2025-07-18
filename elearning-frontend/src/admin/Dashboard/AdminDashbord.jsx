@@ -34,7 +34,7 @@ const AdminDashbord = ({ user }) => {
       <Layout>
         <div className="main-content">
           <div className="box">
-            <p>Total Courses</p>
+            <p>Total Houses</p>
             <p>{stats.totalCoures}</p>
           </div>
           <div className="box">

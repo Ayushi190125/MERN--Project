@@ -86,14 +86,14 @@ const AdminCourses = ({ user }) => {
     <Layout>
       <div className="admin-courses">
         <div className="left">
-          <h1>All Houses</h1>
+          <h1>All Courses</h1>
           <div className="dashboard-content">
             {courses && courses.length > 0 ? (
               courses.map((e) => {
                 return <CourseCard key={e._id} course={e} />;
               })
             ) : (
-              <p>No Houses Yet</p>
+              <p>No Courses Yet</p>
             )}
           </div>
         </div>
@@ -101,7 +101,7 @@ const AdminCourses = ({ user }) => {
         <div className="right">
           <div className="add-course">
             <div className="course-form">
-              <h2>Add House</h2>
+              <h2>Add Course</h2>
               <form onSubmit={submitHandler}>
                 <label htmlFor="text">Title</label>
                 <input

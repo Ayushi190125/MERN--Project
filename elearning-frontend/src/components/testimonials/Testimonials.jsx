@@ -42,7 +42,7 @@ const Testimonials = () => {
   ];
   return (
     <section className="testimonials">
-      <h2>Service Review</h2>
+      <h2>Study Review</h2>
       <div className="testmonials-cards">
         {testimonialsData.map((e) => (
           <div className="testimonial-card" key={e.id}>

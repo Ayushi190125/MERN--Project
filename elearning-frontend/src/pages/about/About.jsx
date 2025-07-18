@@ -7,7 +7,7 @@ const About = () => {
       <div className="about-content">
         <h2>About Us</h2>
         <p>
-        Welcome to the Society Management System — your one-stop platform for hassle-free house selling and buying within residential societies and communities. We are a team of dedicated professionals working to simplify the complex process of real estate transactions by bringing buyers, sellers, and society management together in a secure and transparent environment.
+        Welcome to the E-learning Platform — your one-stop destination for seamless online education. We are a team of dedicated educators and tech professionals committed to simplifying the learning journey by bringing together students, teachers, and institutions in a secure, engaging, and transparent digital environment.
         </p>
       </div>
     </div>

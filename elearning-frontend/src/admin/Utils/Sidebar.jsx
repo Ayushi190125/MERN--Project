@@ -22,7 +22,7 @@ const Sidebar = () => {
             <div className="icon">
               <FaBook />
             </div>
-            <span>Courses</span>
+            <span>Houses</span>
           </Link>
         </li>
 

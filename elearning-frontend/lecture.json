@@ -1,0 +1,38 @@
+[
+    {
+      "title": "Introduction to Quantum Cryptography",
+      "description": "An overview of quantum cryptography, its principles, and its importance in securing communication.",
+      "video": "https://example.com/videos/introduction-to-quantum-cryptography",
+      "course": "605c72c4c5b2b34e4f5d5e7a",  
+      "createdAt": "2024-10-01T10:00:00Z"
+    },
+    {
+      "title": "Quantum Key Distribution (QKD)",
+      "description": "Explaining the concept of Quantum Key Distribution and its practical implementations.",
+      "video": "https://example.com/videos/quantum-key-distribution",
+      "course": "605c72c4c5b2b34e4f5d5e7a",  
+      "createdAt": "2024-10-02T10:00:00Z"
+    },
+    {
+      "title": "Quantum Entanglement and Its Role in Cryptography",
+      "description": "Understanding quantum entanglement and how it contributes to secure communications.",
+      "video": "https://example.com/videos/quantum-entanglement",
+      "course": "605c72c4c5b2b34e4f5d5e7a",  
+      "createdAt": "2024-10-03T10:00:00Z"
+    },
+    {
+      "title": "Protocols for Quantum Cryptography",
+      "description": "A deep dive into various protocols used in quantum cryptography, including BB84 and E91.",
+      "video": "https://example.com/videos/quantum-protocols",
+      "course": "605c72c4c5b2b34e4f5d5e7a",  
+      "createdAt": "2024-10-04T10:00:00Z"
+    },
+    {
+      "title": "Challenges in Quantum Cryptography",
+      "description": "Discussing the challenges and limitations of current quantum cryptography systems.",
+      "video": "https://example.com/videos/challenges-in-quantum-cryptography",
+      "course": "605c72c4c5b2b34e4f5d5e7a", 
+      "createdAt": "2024-10-05T10:00:00Z"
+    }
+  ]
+  

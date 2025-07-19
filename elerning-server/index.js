@@ -11,7 +11,7 @@ const app = express();
 app.use(express.json());
 app.use(cors());
 
-const port = process.env.PORT;
+const port = process.env.PORT || 5173;
 
 app.get("/", (req, res) => {
   res.send("Server is working");

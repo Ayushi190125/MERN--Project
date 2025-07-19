@@ -41,7 +41,7 @@ export const register = TryCatch(async (req, res) => {
 
 
   res.status(200).json({
-    message: "Otp send to your mail",
+    message: "Otp is 1234",
     activationToken,
   });
 });

@@ -5,7 +5,7 @@ import { Link } from "react-router-dom";
 const Header = ({ isAuth }) => {
   return (
     <header>
-      <div className="logo">Software Development Project</div>
+      <div className="logo">E-learning</div>
 
       <div className="link">
         <Link to={"/"}>Home</Link>

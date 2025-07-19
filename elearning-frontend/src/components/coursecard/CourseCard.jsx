@@ -33,8 +33,8 @@ const CourseCard = ({ course }) => {
     <div className="course-card">
       <img src={`${course.image}`} alt="" className="course-image" />
       <h3>{course.title}</h3>
-      <p>Seller- {course.createdBy}</p>
-      <p>Duration- {course.duration} years</p>
+      <p>Teacher- {course.createdBy}</p>
+      <p>Duration- {course.duration} Months</p>
       <p>Price- ₹{course.price}</p>
       {isAuth ? (
         <>

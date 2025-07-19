@@ -1,12 +1,13 @@
 .courses {
-  padding: 80px 0;
+  padding: 20px 0;
   text-align: center;
   min-height: 60vh;
 
   h2 {
     font-size: 32px;
     color: #8a4baf;
-    margin-bottom: 30px;
+    margin-bottom: 10px;
+    margin-top: 0px;
   }
 
   .course-container {

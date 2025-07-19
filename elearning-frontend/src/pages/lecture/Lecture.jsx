@@ -120,122 +120,154 @@ const Lecture = ({ user }) => {
   useEffect(() => {
     fetchLectures();
   }, []);
+
   return (
     <>
       {loading ? (
         <Loading />
       ) : (
-        <>
-          <div className="lecture-page">
-            <div className="left">
-              {lecLoading ? (
-                <Loading />
-              ) : (
-                <>
-                  {lecture.video ? (
-                    <>
-                      <video
-                        src={`${server}/${lecture.video}`}
-                        width={"100%"}
-                        controls
-                        controlsList="nodownload noremoteplayback"
-                        disablePictureInPicture
-                        disableRemotePlayback
-                        autoPlay
-                      ></video>
-                      <h1>{lecture.title}</h1>
-                      <h3>{lecture.description}</h3>
-                    </>
-                  ) : (
-                    <h1>Information of Documents</h1>
-                    
-                  )}
-                </>
-              )}
-            </div>
-            <div className="right">
-              {user && user.role === "admin" && (
-                <button className="common-btn" onClick={() => setShow(!show)}>
-                  {show ? "Close" : "Add Lecture +"}
-                </button>
-              )}
-
-              {show && (
-                <div className="lecture-form">
-                  <h2>Add Lecture</h2>
-                  <form onSubmit={submitHandler}>
-                    <label htmlFor="text">Title</label>
-                    <input
-                      type="text"
-                      value={title}
-                      onChange={(e) => setTitle(e.target.value)}
-                      required
-                    />
-
-                    <label htmlFor="text">Description</label>
-                    <input
-                      type="text"
-                      value={description}
-                      onChange={(e) => setDescription(e.target.value)}
-                      required
-                    />
-
-                    <input
-                      type="file"
-                      placeholder="choose video"
-                      onChange={changeVideoHandler}
-                      required
-                    />
-
-                    {videoPrev && (
-                      <video
-                        src={videoPrev}
-                        alt=""
-                        width={300}
-                        controls
-                      ></video>
-                    )}
-
-                    <button
-                      disabled={btnLoading}
-                      type="submit"
-                      className="common-btn"
-                    >
-                      {btnLoading ? "Please Wait..." : "Add"}
-                    </button>
-                  </form>
-                </div>
-              )}
-
-              {lectures && lectures.length > 0 ? (
-                lectures.map((e, i) => (
+        <div className="lecture-page">
+          <div className="left">
+            {lecLoading ? (
+              <Loading />
+            ) : (
+              <>
+                {lecture.video ? (
                   <>
-                    <div
-                      onClick={() => fetchLecture(e._id)}
-                      key={i}
-                      className={`lecture-number ${
-                        lecture._id === e._id && "active"
-                      }`}
-                    >
-                      {i + 1}. {e.title}
-                    </div>
-                    {user && user.role === "admin" && (
-                      <button
-                        className="common-btn"
-                        style={{ background: "red" }}
-                        onClick={() => deleteHandler(e._id)}
-                      >
-                        Delete {e.title}
-                      </button>
-                    )}
+                    <video
+                      src={`${server}/${lecture.video}`}
+                      width={"100%"}
+                      controls
+                      controlsList="nodownload noremoteplayback"
+                      disablePictureInPicture
+                      disableRemotePlayback
+                      autoPlay
+                    ></video>
+                    <h1>{lecture.title}</h1>
+                    <h3>{lecture.description}</h3>
                   </>
-                ))
-              ) : (
-                <p></p>
-              )}
-            </div>
+                ) : (
+                  <div>
+                    <p>
+                      📚 <strong>Welcome to this course!</strong> Select a lecture
+                      from the list on the right to start watching. This course
+                      includes high-quality video lectures, detailed explanations,
+                      and hands-on practice activities to help reinforce your learning.
+                    </p>
+
+                    <h3 style={{ marginTop: "20px" }}>🎥 Available Lectures:</h3>
+                    {lectures && lectures.length > 0 ? (
+                      <div className="lecture-preview-list">
+                        {lectures.map((lec, index) => (
+                          <div
+                            key={lec._id}
+                            style={{ marginBottom: "20px", cursor: "pointer" }}
+                            onClick={() => fetchLecture(lec._id)}
+                          >
+                            <video
+                              src={`${server}/${lec.video}`}
+                              width="100%"
+                              style={{ borderRadius: "8px" }}
+                              muted
+                              loop
+                              onMouseOver={(e) => e.target.play()}
+                              onMouseOut={(e) => e.target.pause()}
+                            />
+                            <h4>{index + 1}. {lec.title}</h4>
+                            <p>{lec.description}</p>
+                          </div>
+                        ))}
+                      </div>
+                    ) : (
+                      <p>No lectures uploaded yet.</p>
+                    )}
+                  </div>
+                )}
+              </>
+            )}
           </div>
-        </>
+
+          <div className="right">
+            {user && user.role === "admin" && (
+              <button className="common-btn" onClick={() => setShow(!show)}>
+                {show ? "Close" : "Add Lecture +"}
+              </button>
+            )}
+
+            {show && (
+              <div className="lecture-form">
+                <h2>Add Lecture</h2>
+                <form onSubmit={submitHandler}>
+                  <label htmlFor="text">Title</label>
+                  <input
+                    type="text"
+                    value={title}
+                    onChange={(e) => setTitle(e.target.value)}
+                    required
+                  />
+
+                  <label htmlFor="text">Description</label>
+                  <input
+                    type="text"
+                    value={description}
+                    onChange={(e) => setDescription(e.target.value)}
+                    required
+                  />
+
+                  <input
+                    type="file"
+                    placeholder="choose video"
+                    onChange={changeVideoHandler}
+                    required
+                  />
+
+                  {videoPrev && (
+                    <video
+                      src={videoPrev}
+                      alt=""
+                      width={300}
+                      controls
+                    ></video>
+                  )}
+
+                  <button
+                    disabled={btnLoading}
+                    type="submit"
+                    className="common-btn"
+                  >
+                    {btnLoading ? "Please Wait..." : "Add"}
+                  </button>
+                </form>
+              </div>
+            )}
+
+            {lectures && lectures.length > 0 ? (
+              lectures.map((e, i) => (
+                <div key={i}>
+                  <div
+                    onClick={() => fetchLecture(e._id)}
+                    className={`lecture-number ${
+                      lecture._id === e._id && "active"
+                    }`}
+                  >
+                    {i + 1}. {e.title}
+                  </div>
+                  {user && user.role === "admin" && (
+                    <button
+                      className="common-btn"
+                      style={{ background: "red" }}
+                      onClick={() => deleteHandler(e._id)}
+                    >
+                      Delete {e.title}
+                    </button>
+                  )}
+                </div>
+              ))
+            ) : (
+              <p>No lectures found.</p>
+            )}
+          </div>
+        </div>
       )}
     </>
   );

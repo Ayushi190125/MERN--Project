@@ -8,9 +8,17 @@ header {
   position: relative;
 
   .logo {
-    font-size: 25px;
-    font-weight: 600;
-    color: #8a4baf;
+     font-family: 'Poppins';
+  font-size: 1.8rem;
+  font-weight: 700;
+  color: #2b6cb0; /* Soft blue */
+  background: linear-gradient(to right, #8a4baf, #d368be);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  cursor: pointer;
+  transition: transform 0.3s ease;
 
     @media (max-width: 768px) {
       font-size: 18px;
